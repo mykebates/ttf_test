@@ -1,0 +1,20 @@
+@using System.Collections.Generic
+@using System.Linq
+@using System.Threading.Tasks
+@model IEnumerable<TTF.Models.Quip>
+
+@{
+    ViewData["Title"] = "Quips";
+}
+
+<h1>Hello Quips</h1>
+
+<ul>
+    @foreach(var quip in Model.Take(10))
+    {
+        <li>
+            <h3>@quip.Name</h3>
+            <img src="@quip.Image"/>
+        </li>
+    }
+</ul>
